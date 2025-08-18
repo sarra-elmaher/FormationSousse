@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 module.exports.connectToMongoDb = async () => {
     mongoose.set('strictQuery', false);
     mongoose
-    .connect("mongodb+srv://elmahersarra:YnLSaZAkKfx23tuE@cluster0.m1kpmbp.mongodb.net/")
+    .connect(process.env.url_Db)
     .then(() => { 
         console.log("connect to db") ;
     
